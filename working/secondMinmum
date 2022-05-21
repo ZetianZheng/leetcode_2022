@@ -1,0 +1,25 @@
+/**
+ * input an array, output the second minimum element
+ */
+public class SecondMinimum() {
+    public static Integer secondMinimum(int[] array) {
+        if (array.length < 2) {
+            return null;
+        }
+
+        int min = Math.min(array[0], array[1]);
+        int second = Math.max(array[0], array[1]);
+
+        for (int a : array) {
+            if (a < min) {
+                second = min;
+                min = a;
+            } else if (a < second) {
+                // a bigger or equal than min and smaller than second, change the second only
+                second = a;
+            }
+        }
+
+        return second;
+    }
+}

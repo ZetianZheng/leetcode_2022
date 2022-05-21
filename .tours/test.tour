@@ -1,0 +1,13 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "test",
+  "steps": [
+    {
+      "file": "../../../java.base/java.util/Arrays.class",
+      "description": "Binary search code!",
+      "line": 2224,
+      "title": "binarySearch"
+    }
+  ],
+  "ref": "main"
+}
