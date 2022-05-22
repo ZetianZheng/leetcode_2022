@@ -64,6 +64,10 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+/**
+ * two pointers, 
+ * <p> O(m + n), space O(1)</p>
+ */
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1);
