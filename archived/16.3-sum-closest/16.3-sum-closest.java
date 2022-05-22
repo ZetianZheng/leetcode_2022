@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import java.util.Arrays;
 
->>>>>>> 6fbc1e5896fb269c5fa139d3ed782e25d4bc98c9
 /*
  * @lc app=leetcode id=16 lang=java
  *
@@ -11,17 +8,10 @@ import java.util.Arrays;
  * https://leetcode.com/problems/3sum-closest/description/
  *
  * algorithms
-<<<<<<< HEAD
- * Medium (47.05%)
- * Likes:    5847
- * Dislikes: 250
- * Total Accepted:    802.4K
-=======
  * Medium (46.45%)
  * Likes:    5848
  * Dislikes: 250
  * Total Accepted:    802.5K
->>>>>>> 6fbc1e5896fb269c5fa139d3ed782e25d4bc98c9
  * Total Submissions: 1.7M
  * Testcase Example:  '[-1,2,1,-4]\n1'
  *
@@ -60,11 +50,6 @@ import java.util.Arrays;
  */
 
 // @lc code=start
-<<<<<<< HEAD
-class Solution {
-    public int threeSumClosest(int[] nums, int target) {
-        
-=======
 /**
  * three pointer, one pivot to confirm the first element
  * <p> then use two sum closest to get rest two elememnts.</p>
@@ -127,7 +112,6 @@ class Solution {
 
         // return the closest sum, delta + sum = target
         return target - delta;  
->>>>>>> 6fbc1e5896fb269c5fa139d3ed782e25d4bc98c9
     }
 }
 // @lc code=end
