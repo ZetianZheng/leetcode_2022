@@ -46,7 +46,7 @@
  * second loop to fill the rest array</p>
  * @param nums
  */
-class Solution {
+class SolutionMove {
     public static void moveZeroes(int[] nums) {
         int ind = removeElements(nums, 0);
         while (ind < nums.length) {
@@ -54,14 +54,21 @@ class Solution {
         }
     }
 
+    /**
+     * remove target from array
+     * @param nums array
+     * @param target which need to be removed
+     * @return
+     */
     public static int removeElements(int[] nums, int target) {
         int slow = 0, fast = 0;
         while (fast < nums.length) {
-            // fast pointer look forward until found the target.
+            // fast pointer and slow pointer move forward until found the target.
             if (nums[fast] != target) {
                 nums[slow] = nums[fast];
                 slow++;
             } 
+            // fast move forward when found the target, go to next element which not equal to target
             fast++;
         }
         return slow;

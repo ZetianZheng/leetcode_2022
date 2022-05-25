@@ -48,10 +48,10 @@
  * intuiative way: one pass, record the max count
  * O(n), O(1)
  */
-class Solution {
+class SolutionFindMax {
     public int findMaxConsecutiveOnes(int[] nums) {
-        // max to record the max count of 1s, 
-        // count record the count from the latest 0.
+        // max: to record the max count of 1s, 
+        // count: record the consecutive-ones count from the latest 0.
         int max = 0, count = 0;
 
         // iteration

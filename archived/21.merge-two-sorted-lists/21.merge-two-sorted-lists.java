@@ -68,7 +68,7 @@
  * two pointers, 
  * <p> O(m + n), space O(1)</p>
  */
-class Solution {
+class SolutionMerge {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1);
         ListNode head = dummy;

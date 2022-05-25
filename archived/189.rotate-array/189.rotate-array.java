@@ -131,6 +131,26 @@ class Solution {
             nums[i] = a[i];
         }
       }
+
+      /** 
+       * solution3 : array add implementation:
+       * rotate k times, 
+       * every time rotate: put last element to the first, move rest elements forward.
+       * O(kn), O(1)
+       * */
+      public void rotate3(int[] nums, int k) {
+          int len = nums.length;
+          k = k % len;
+          for (int i = 0; i < k; i++) {
+              int last = nums[len - 1];
+              for (int j = len - 1; j > 0; j--) {
+                  // move forward rest elements
+                  nums[j] = nums[j - 1];
+              }
+
+              nums[0] = last;
+          }
+      }
 }
 // @lc code=end
 

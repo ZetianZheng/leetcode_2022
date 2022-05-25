@@ -68,7 +68,7 @@
  * 使用异或运算的特性：一个数和它本身做异或运算结果为 0，一个数和 0 做异或运算还是它本身。
  * <p>只要把所有的元素和索引做异或运算，成对儿的数字都会消为 0，只有这个落单的元素会剩下，也就达到了我们的目的：</p>
  */
-class Solution {
+class SolutionMiss {
     public int missingNumber(int[] nums) {
         int ans = 0;
         // xor the last index, because the range is from [0, n]
