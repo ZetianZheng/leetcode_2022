@@ -59,8 +59,43 @@
 
 // @lc code=start
 class Solution {
+    int[] cost;
+    int[] dp;
     public int minCostClimbingStairs(int[] cost) {
-        
+        int n = cost.length;
+        this.cost = cost;
+        // the top is the next element after the last element
+        dp = new int[n + 1];
+        Arrays.fill(dp, -1);
+        return cs(n);
+    }
+
+    // recursion: + TD 
+    // return the minimum cost to the current pos.
+    private int cs(int n) {
+        // bc: if top: n < 2, can get the top with out cost
+        if (n < 2) {
+            return 0;
+        }
+
+        if (dp[n] != -1) {
+            return dp[n];
+        } else {
+            dp[n] = Math.min(cs(n - 1) + cost[n - 1], cs(n - 2) + cost[n - 2]) ;
+
+            return dp[n];
+        }
+    }
+
+    // BU
+    public int minCostClimbingStairs0(int[] cost) {
+        int[] dp = new int[cost.length+1];
+        dp[0] = 0;
+        dp[1] = 0;
+        for(int i = 2;i < dp.length;i++){
+            dp[i] = Math.min(dp[i-1] + cost[i-1], dp[i-2] + cost[i-2]);
+        }
+        return dp[cost.length];
     }
 }
 // @lc code=end

@@ -68,8 +68,8 @@
  * use recursion, find the relation ship between: grayCode(n) and grayCode(n - 1);
  * 二进制数组先镜像，在前面分别加上0和1，即是下一个灰码的数组。
  * n = 1: [0,     1]   1,   0
- * n = 2: [00,   01,  11,  10]  10,  11,  01,  00
- * n = 3: [000, 001, 011, 010, 110, 111, 101, 100]
+ * n = 2: [00,   01,  11,  10],  [10,  11,  01,  00]
+ * n = 3: [000, 001, 011, 010], [110, 111, 101, 100]
  * 所以grayCode(n) = copy(grayCode(n - 1)) + map(grayCode(n - 1),  x -> (x + 2^(n - 1))
  */
 class Solution {

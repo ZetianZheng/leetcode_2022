@@ -116,7 +116,16 @@ class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         return mergeKListsHelper(lists, 0, lists.length - 1);
     }
-    
+
+    /**
+     * id: start, end two pointer
+     * bc: start == end, return the listnode
+     * ss: 合并左右两个区间
+     * @param lists
+     * @param start
+     * @param end
+     * @return
+     */
     public ListNode mergeKListsHelper(ListNode[] lists, int start, int end) {
         if (start > end) {
             return null;
